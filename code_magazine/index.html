@@ -7,18 +7,29 @@
   <!--Need 1 head, for elements not visible in the webpage-->
   <head>
     <meta charset="UTF-8" />
+    <!--Linking the CSS file to this HTML file. This is the best practice.-->
+    <link href="style.css" rel="stylesheet" />
+
     <title>The Basic Language of the Web: HTML</title>
+
+    <!--Creating a CSS block for elements. The head block is for the information about the page.-->
+    <style>
+      h3 {
+        color: green;
+      }
+    </style>
   </head>
 
   <!--Need 1 body, for elements visible in the webpage-->
   <body>
     <!--Creating containers like Headers and Navigation <nav>-->
-    <header>
-      <h1>The Code Magazine</h1>
+    <header class="main-header">
+      <!--Can also do inline CSS. But this is not a good practice.-->
+      <h1 style="color: blue">📘 The Code Magazine</h1>
       <nav>
         <a href="blog.html">All Blogs</a>
         <a href="#">Challenges</a>
-        <a href="#">Flex Box</a>
+        <a href="#">Flexbox</a>
         <a href="#">CSS</a>
       </nav>
     </header>
@@ -33,7 +44,9 @@
           height="50"
           width="50"
         />
-        <p>Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027</p>
+        <p id="author">
+          Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+        </p>
         <img
           src="img/post-img.jpg"
           alt="HTML code on a screen"
@@ -80,8 +93,8 @@
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/HTML"
           target="_blank"
-          >MDN Web Docs.</a
-        >
+          >MDN Web Docs</a
+        >.
       </p>
 
       <h3>Why should you learn HTML?</h3>
@@ -107,7 +120,7 @@
     <aside>
       <h4>Related Posts</h4>
       <ul>
-        <li>
+        <li class="related-post">
           <img
             src="img/related-1.jpg"
             alt="man coding on laptop"
@@ -115,9 +128,9 @@
             height="50"
           />
           <a href="#">How to learn Web Development</a>
-          <p>By <em>Jonas Schmedtmann</em></p>
+          <p class="related-author">By Jonas Schmedtmann</p>
         </li>
-        <li>
+        <li class="related-post">
           <img
             src="img/related-2.jpg"
             alt="lightning bolt"
@@ -125,9 +138,9 @@
             height="50"
           />
           <a href="#">The Unknown Powers of CSS</a>
-          <p>By Jim Dillon</p>
+          <p class="related-author">By Jim Dillon</p>
         </li>
-        <li>
+        <li class="related-post">
           <img
             src="img/related-3.jpg"
             alt="lines of code on laptop screen"
@@ -135,13 +148,17 @@
             height="50"
           />
           <a href="#">Why Javascript is Awesome</a>
-          <p>By Matilda</p>
+          <p class="related-author">By Matilda</p>
         </li>
       </ul>
     </aside>
 
     <!--Creatin a footer container-->
     <!--Note the usag of HTML entity using the & symbol-->
-    <footer>Copyright &copy; 2023 by The Code Magazine</footer>
+    <footer>
+      <p id="copyright" class="copyright text">
+        Copyright &copy; 2023 by The Code Magazine
+      </p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,163 @@
+/*Universal selector*/
+* {
+  color: #444; /*It has the lowest priority*/
+}
+/*Inheritance for all elements in the body of the page*/
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad; /*This is not an inheritable property*/
+}
+
+/*A list selector to create the common property*/
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+/*Creating a descendent selector. Be careful of using this form though!*/
+/*
+footer p {
+  font-size: 8px;
+}
+*/
+
+/*
+article header p {
+  font-style: italic;
+}
+*/
+
+/*Using an ID selector instead of descendent selector to have more control*/
+#author {
+  font-style: italic;
+}
+
+#copyright {
+  font-size: 10px;
+}
+
+/* Creating a class selector. Classes can be used across multiple elements in HTML, whereas ID can only be used for one element */
+.related-author {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.related-post {
+  list-style: none;
+  font-size: 12px;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+/* Classes are preferred over IDs */
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+li {
+  font-size: 15px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+}
+
+/*
+Using pseudo-classes in CSS. Can be used with descendent selector, but the results are unexpected. See the last case as an example.
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(odd) {
+  color: red;
+}
+*/
+
+/*
+Now lets do this: Selecting a paragraph inside the article, and then trying to select the first child of that paragraph.
+This doesn't work. What it does instead is select the object if it is first paragraph of the article object. If first element is a non-paragraph element, nothing happens
+*/
+
+/*
+article p:first-child {
+  color: red;
+}
+*/
+
+/*Now lets trying to style some anchor elements or hyperlinks*/
+a {
+  color: red;
+}
+
+/*We can use pseduclass to style different stages of the anchor elements. Link p-class find those elements with href attributes.*/
+a:link {
+  color: #0068dd;
+  text-decoration: none; /*to remove the underline*/
+}
+
+/*For visited links, this is the p-class*/
+a:visited {
+  color: #ef6867;
+}
+
+/*For the behavior when the cursor is hovering*/
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/*A link that is clicked is considered an active link*/
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/*Resolving conflicts in the footer element*/
+#copyright {
+  color: red;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow; /*If there was no ID selector, this styling will be applied since it is the last one*/
+}
+
+footer p {
+  color: green !important;
+}
