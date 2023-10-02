@@ -1,0 +1,76 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+article {
+  border: 3px solid black;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.listing {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  background-color: rgba(187, 186, 186, 0.2);
+}
+
+.shoe-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cost {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#shipping {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(96, 96, 96);
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.more-info:link,
+.more-info:visited {
+  font-size: 14px;
+  color: blue;
+}
+
+.more-info:hover,
+.more-info:active {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.details-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.details-list {
+  display: inline-block;
+  text-align: left;
+  list-style: square;
+}
+
+.add-cart {
+  color: white;
+  text-transform: uppercase;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.add-cart:hover {
+  color: black;
+  background-color: white;
+}

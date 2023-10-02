@@ -3,33 +3,39 @@
 <html>
   <head>
     <title>Shop Online</title>
+    <link href="Challenge_style.css" rel="stylesheet" />
   </head>
 
   <body>
     <article>
-      <h1>Converse Chuck Taylor All Star Low Top</h1>
+      <h1 class="listing">Converse Chuck Taylor All Star Low Top</h1>
       <img
+        class="shoe-image"
         src="img/challenges.jpg"
         alt="men's shoes"
         height="250"
         width="250"
       />
-      <p><strong>$65.00</strong></p>
-      <p>Free Shipping</p>
+      <p class="cost">$65.00</p>
+      <p id="shipping">Free Shipping</p>
       <p>
         Ready to dress up or down, these classic canvas Chucks are an everyday
         wardrobe staple
       </p>
-      <a href="#">More Information &rarr;</a>
+      <a class="more-info" href="#">More Information &rarr;</a>
+
       <!--Creating an unordered list-->
-      <h3>Product Details</h3>
-      <ul>
-        <li>Lightweight, durable canvas sneaker</li>
-        <li>Lightly padded footbed for added comfort</li>
-        <li>Iconic Chuck Taylor ankle patch</li>
-      </ul>
+      <div class="product-detais">
+        <h3 class="details-title">Product Details</h3>
+        <ul class="details-list">
+          <li>Lightweight, durable canvas sneaker</li>
+          <li>Lightly padded footbed for added comfort</li>
+          <li>Iconic Chuck Taylor ankle patch</li>
+        </ul>
+      </div>
+
       <!--Adding a button element-->
-      <button>Add to cart</button>
+      <button class="add-cart">Add to cart</button>
     </article>
   </body>
 </html>
